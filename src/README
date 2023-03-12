@@ -1,0 +1,40 @@
+Proyecto del Segundo Cuatrimestre Fundamentos de Programación (Curso 2022/23)
+Autor/a: Juan Alberto Gil Marín uvus:juagilmar4
+
+Este proyecto es una adaptación del proyecto presentado por el estudiante Juan Alberto Gil Marín en el curso 2022/23.
+
+
+
+Estructura de las carpetas del proyecto
+/src: Directorio con el código fuente.
+fp.peliculas: Paquete que contiene los tipos del proyecto.
+fp.peliculas.test: Paquete que contiene las clases de test del proyecto.
+fp.utiles: Paquete que contiene las clases de utilidad.
+fp.common: Paquete que contiene los tipos auxiliares, en este caso, únicamente 'DayOfWeek'.
+/data: Contiene el dataset del proyecto.
+rotten tomato movie review.csv: Archivo csv que contiene datos de diferentes peliculas.
+
+
+Estructura del dataset
+El dataset original se puede obtener de la URL https://www.kaggle.com/datasets/yazeidalqahtani/rotten-tomato-movie-reviwe. Originalmente tiene 9 columnas y cada fila contiene datos sobre una pelicula con valoraciones en www.rottentomatoes.com. El dataset usado en este proyecto tiene 10 columnas, 7 se han tomado del dataset original, y tres, la fecha, el boolean de si ganó un oscar y el día en el que salió, se han generado de forma aleatoria. A continuación se describen las 10 columnas del dataset:
+
+Name: de tipo cadena, comenta el nombre de la pelicula.
+DirectedBy: de tipo cadena, indica el director de la pelicula en cuestión.
+Studio: de tipo cadena, indica el resultado de la partida. Puede tomar los valores: white, black o draw, para indicar si ganan las blancas, las negras, o hay tablas.
+TOMATOMETERscore: de tipo cadena, contiene el identificador del jugador de blancas.
+TOMATOMETERcount: de tipo entero, tiene el valor ELO del jugador de blancas. El valor ELO es un número que se usa en lichess.com para hacer un ranking de los jugadores.
+AUDIENCEscore: de tipo cadena, contiene el identificador del jugador de negras.
+AUDIENCEcount: de tipo entero, tiene el valor ELO del jugador de negras.
+Gano_oscar: de tipo cadena, contiene una secuencia con los movimientos de la partida. Los movimientos están separados por espacios en blanco. Por ejemplo, d4 d5 c4 c6 cxd5 e6 dxe6 fxe6 Nf3 Bb4+ Nc3 Ba5 Bf4.
+Fecha: de tipo fecha. Indica la fecha en la que se jugó la partida.
+dayOfWeek: de tipo auxiliar. Indica si se estreno en un lunes, jueves o viernes.
+
+
+Constructores:
+
+C1: Tiene un parámetro por cada propiedad básica del tipo.
+
+
+R1: Debe tener un nombre, no puede tener ese campo vacío.
+R2: La valoración (TOMATOMETERcount) no puede ser negativa.
+
